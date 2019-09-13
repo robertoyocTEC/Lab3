@@ -12,22 +12,140 @@ body {
   width: 50px;
 }
 
+.product {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 5px ;
+}
+
+.product > h2,i {
+  text-align: center;
+}
+
 /* phones */
 @media only screen and (max-width: 600px) {
+  header > h1 {
+    text-align: center;
+  }
+  header > div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer{
+    display: none;
+  }
+ 
+
+
+}
+
+@media only screen and (max-width: 991px) {
+  nav {
+    background: gray;
+    color: white;
+    padding-bottom: 20px;
+  }
+  .hamburger{
+    text-align: right;
+    z-index: 0;
+  }
+  .menu{
+    display: none;
+    z-index: 1;
+  }
+  nav:hover > .menu{
+    display: block;
+  }
+  .product {
+    margin: 10px 15px;
+  }
+  
 
 }
 
 
 /* tablets */
 
-@media only screen and (max-width: 991px) and (min-width: 601px) {
+@media only screen and (min-width: 601px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  header > h1 {
+    width: 70%;
+    text-align: center;
+  }
+  header > div {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-inline-start: 0;
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+    
+  }
+  footer > ul > li {
+    list-style: none;
+    width: 33%;
+    text-align: center;
+    
+  }
 
 }
 
 
 /*larger devices */
 @media only screen and (min-width: 992px) {
-
+  nav {
+    background: gray;
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .hamburger{
+    text-align: right;
+    z-index: 0;
+  }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 0;
+    list-style: none;
+    justify-content: flex-end;
+  }
+  .menu > li {
+    width: 80px;
+    text-align: center;
+  }
+  .menu > li:last-child {
+    margin-left: 20px;
+  }
+  .hamburger{
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .product{
+    width: 33%;
+    margin: 0 10px;
+  }
 }
 
 
